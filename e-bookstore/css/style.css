@@ -4,7 +4,6 @@
 }
 
 body{
-       background-image: url(/img/502079.jpg);
    background-position: center;
    background-size: cover;
 
@@ -79,7 +78,16 @@ section nav img{
     z-index: 2;
     left: 37%;
     top: 25%;
-     
+}
+#sign3{
+    font-size: 65px;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;  
+    color: #fff;
+    opacity: 45%;
+    position: absolute;
+    z-index: 2;
+    left: 25%;
+    top: 25%;
 }
 .wrap{
     max-width:37%;
@@ -95,6 +103,37 @@ section nav img{
     position: absolute;
     left: 5%;
     top: 21%;
+    z-index: 1;
+}
+.admin_container{
+    width:70%;
+    border-radius:20px ;
+    margin:auto;
+    background-color: dimgrey;
+    box-sizing:border-box;
+    padding:40px;
+    color: darkgray;
+    margin-top:0px;
+    margin-bottom: 30px;
+    position: absolute;
+    left: 5%;
+    top: 21%;
+    z-index: 1;
+}
+
+.admin_veri_container{
+    width:70%;
+    border-radius:20px ;
+    margin:auto;
+    background-color: dimgrey;
+    box-sizing:border-box;
+    padding:40px;
+    color: darkgray;
+    margin-top:0px;
+    margin-bottom: 30px;
+    position: absolute;
+    right: 5%;
+    top: 25%;
     z-index: 1;
 }
 .reg_link1{
@@ -130,7 +169,6 @@ h2{
     font-weight: bold;
 }
 input[type=submit], input[type=reset]{
-    width:48%;
     box-sizing: border-box;
     padding: 10px 0;
     outline:none;
@@ -152,6 +190,7 @@ input[type=submit]:hover, input[type=reset]:hover{
 #reg-link{
     bottom: 0px;
     color: rgb(255, 255, 255);
+    text-decoration: none;
     padding-bottom: 1px;
 }
 .footer{
@@ -165,6 +204,11 @@ input[type=submit]:hover, input[type=reset]:hover{
     bottom:0px;
     left:0px;
 }
+
+/*=====================================================================================================================================================================
+                                            EDIT BOOKS
+=======================================================================================================================================================================*/
+
 
 @media screen and (max-width:540px) {
     .wrap{
