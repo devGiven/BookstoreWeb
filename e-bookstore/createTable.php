@@ -14,7 +14,7 @@ $tblusers = "CREATE TABLE IF NOT EXISTS  `tblusers` (
 	`vStatus` int NOT NULL DEFAULT b'0',
 	PRIMARY KEY (`UserID`)
   ) ENGINE=InnoDB DEFAULT CHARSET=latin1";
-  
+  /* pre_match */
  
   mysqli_query($conn, "DROP TABLE IF EXISTS `tblbooks`;");
   $tblbooks = "CREATE TABLE IF NOT EXISTS  `tblbooks` (
