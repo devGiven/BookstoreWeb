@@ -1,4 +1,7 @@
-# e-bookstore
+#Web Development Task 2
+## e-bookstore
+
+**Heres the list of requirements for the software**
 a user-friendly web application for buying and selling second-hand textbooks. 
  a user-friendly web application for buying and selling second-hand textbooks. 
 The features, design and layout of your web application is your personal choice, but the web 
