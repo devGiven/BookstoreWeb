@@ -40,7 +40,10 @@ if(isset($_POST['btnBack'])){
     <link rel="stylesheet" href="css/style.css">
 
     <style>
-     
+     input[type=submit], input[type=reset]{
+        background:#ff0000;
+
+        }
         #btnLogin{
             width:80%;
         }

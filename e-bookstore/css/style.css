@@ -186,7 +186,16 @@ input[type=submit]:hover, input[type=reset]:hover{
     top: 1px;
     cursor: pointer;
 }
-
+.notification{
+        margin: 30px auto; 
+        padding: 10px; 
+        border-radius: 5px; 
+        color: #585858; 
+        background: #c4c5c3; 
+        border: 1px solid #555555;
+        width: 50%;
+        text-align: center;
+}
 #reg-link{
     bottom: 0px;
     color: rgb(255, 255, 255);
@@ -204,7 +213,17 @@ input[type=submit]:hover, input[type=reset]:hover{
     bottom:0px;
     left:0px;
 }
-
+.footer1{
+    background:rgba(206, 200, 200, 0.5); 
+    color:white;
+    height:50px;
+    position: fixed;
+    width:100%;
+    text-align:center;
+    padding-top:20px;
+    bottom:0px;
+    left:0px;
+}
 /*=====================================================================================================================================================================
                                             EDIT BOOKS
 =======================================================================================================================================================================*/

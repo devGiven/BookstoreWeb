@@ -14,14 +14,25 @@ if(isset($_POST['logout'])){
 if (isset($_GET['edit'])) {
     $id = $_GET['edit'];
     $update = true;
-    $record = mysqli_query($db, "SELECT * FROM tblbooks WHERE bookID=$id");
+    $record = mysqli_query($conn, "SELECT * FROM tblusers WHERE UserID=$id");
 
-    if (count($record) == 1 ) {
+    if (count($record) === 1 ) {
         $n = mysqli_fetch_array($record);
-        $name = $n['name'];
-        $surname = $n['surname'];
-        $email = $n['email'];
+        $name = $n['Fname'];
+        $surname = $n['Lname'];
+        $email = $n['Email'];
+        mysqli_query($conn, "UPDATE tblusers SET vStatus = 1  WHERE UserID=$id");
+        //$_SESSION['message'] = "Address updated!"; 
+        //header('location: home.php');
+    
     }
+
+}
+if (isset($_GET['del'])) {
+	$id = $_GET['del'];
+	mysqli_query($conn, "DELETE FROM tblusers WHERE UserID=$id");
+	//$_SESSION['message'] = "Address deleted!"; 
+	//header('location: index.php');
 }
 ?>
 
@@ -140,8 +151,32 @@ if (isset($_GET['edit'])) {
             </nav>
             <div class="frame">
             <center><h1> Administrate Users </h1></center>
-        
-
+            <?php $results = mysqli_query($conn, "SELECT * FROM tblusers WHERE vStatus = 0"); ?>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Name</th>
+                        <th>Surname</th>
+                        <th>Email</th>
+                        <th colspan="2">Action</th>
+                    </tr>
+                </thead>
+                
+                <?php while ($row = mysqli_fetch_array($results)) { ?>
+                    <tr>
+                        <td><?php echo $row['Fname']; ?></td>
+                        <td><?php echo $row['Lname']; ?></td>
+                        <td><?php echo $row['Email']; ?></td>
+                        
+                        <td>
+                            <a href="admin_verification.php?edit=<?php echo $row['UserID']; ?>" class="edit_btn" >Verify</a>
+                        </td>
+                        <td>
+                            <a href="admin_verification.php?del=<?php echo $row['UserID']; ?>" class="del_btn">Decline</a>
+                        </td>
+                    </tr>
+                <?php } ?>
+            </table>
         </div>
 
     <div class="footer">

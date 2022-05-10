@@ -162,15 +162,15 @@ if (isset($_GET['edit'])) {
                 
                 <?php while ($row = mysqli_fetch_array($results)) { ?>
                     <tr>
-                        <td><?php echo $row['name']; ?></td>
-                        <td><?php echo $row['surname']; ?></td>
-                        <td><?php echo $row['email']; ?></td>
+                        <td><?php echo $row['bookTitle']; ?></td>
+                        <td><?php echo $row['category']; ?></td>
+                        <td><?php echo $row['price']; ?></td>
                         
                         <td>
-                            <a href="index.php?edit=<?php echo $row['id']; ?>" class="edit_btn" >Update</a>
+                            <a href="DBConn.php?edit=<?php echo $row['bookID']; ?>" class="edit_btn" >Update</a>
                         </td>
                         <td>
-                            <a href="dbConn.php?del=<?php echo $row['id']; ?>" class="del_btn">Delete</a>
+                            <a href="DBConn.php?del=<?php echo $row['bookID']; ?>" class="del_btn">Delete</a>
                         </td>
                     </tr>
                 <?php } ?>
@@ -182,11 +182,11 @@ if (isset($_GET['edit'])) {
             <label>Category</label>
                 <input type="text" placeholder="E.g Romance" name="category" value="<?php echo $category; ?>">
             <label>Price</label>
-                <input type="text" placeholder="E.g 5 000" name="price" value="<?php echo $price; ?>">
+                <input type="text" placeholder="E.g 5 5000" name="price" value="<?php echo $price; ?>">
 
             <div class="input-group">
-                <?php if ($update == true): ?>
-                    <button class="btn" type="submit" name="update" style="background: #556B2F;" >update</button>
+                <?php if ($update === true): ?>
+                    <button class="btn" type="submit" name="update" >update</button>
                 <?php else: ?>
                     <button class="btn" type="submit" name="save" >Save</button>
                 <?php endif ?>
